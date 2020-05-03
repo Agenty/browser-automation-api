@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "d3f591b4-41e6-4f2f-bde1-61e214858da3",
+		"name": "Agenty Chrome API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "pdf",
+			"item": [
+				{
+					"name": "Convert website into pdf",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f1d7f100-8641-455f-9543-5bd9e3c7dfce",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/pdf?url=https://example.com",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"pdf"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Convert website into pdf with options",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "26f5158d-7b1e-4caa-b749-e85f6d75b004",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"url\": \"https://example.com\",\r\n  \"gotoOptions\": {\r\n    \"timeout\": 30000,\r\n    \"waitUntil\": \"networkidle2\"\r\n  },\r\n  \"options\":{\r\n  \t\"format\" : \"A4\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/pdf",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"pdf"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "screenshot",
+			"item": [
+				{
+					"name": "Capture screenshot",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3e0c93ef-523f-4a1d-8422-07930eb1db48",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/screenshot?url=https://example.com",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"screenshot"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Capture screenshot with options",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6e15796a-b877-41fc-a4c2-7301adb5bfa8",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"url\": \"https://example.com\",\r\n  \"gotoOptions\": {\r\n    \"timeout\": 30000,\r\n    \"waitUntil\": \"load\"\r\n  },\r\n  \"options\":{\r\n  \t\"fullPage\" : false,\r\n  \t\"type\" : \"jpeg\",\r\n  \t\"quality\" : 50,\r\n  \t\"omitBackground\" : true\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/screenshot",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"screenshot"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "content",
+			"item": [
+				{
+					"name": "Get page HTML content",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cf831227-36cd-4cd4-828a-9a7125084d06",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/content?url=https://example.com",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"content"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get page HTML content with options",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6d25c9d3-064d-4039-af15-d8980633a308",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"url\": \"https://example.com\",\r\n  \"gotoOptions\": {\r\n    \"timeout\": 30000,\r\n    \"waitUntil\": \"domcontentloaded\"\r\n  },\r\n  \"userAgent\" : \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/content",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"content"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "redirects",
+			"item": [
+				{
+					"name": "Capture the page redirects chain",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8ba80cdd-d673-4f76-9d9d-51fb939c4f31",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/redirects?url=https://httpbin.org/redirect/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"redirects"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://httpbin.org/redirect/1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Capture the page redirects chain with options",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "358ffbe4-1e59-4756-b5e2-2d74c94d6729",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"url\": \"https://httpbin.org/redirect/1\",\r\n  \"gotoOptions\": {\r\n    \"timeout\": 10000,\r\n    \"waitUntil\": \"load\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/redirects",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"redirects"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "function",
+			"item": [
+				{
+					"name": "Execute custom puppeteer script",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "dac7aec9-d978-466f-a848-ed5c247ffe6e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"module.exports=(async({page:t,request:a})=>{console.log(a.url); const e=await t.goto(a.url),s=await t.title(); return{data:{status:e.status(),title:s},type:\\\"application/json\\\"}});\",\n    \"request\": {\n        \"url\": \"https://example.com\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/function",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"function"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},		
+	],
+	"protocolProfileBehavior": {}
+}
