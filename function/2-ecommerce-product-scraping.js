@@ -2,7 +2,7 @@
 // capture screenshot and return the results
 
 module.exports = async ({ page, request }) => {
-    const response = await page.goto('http://books.toscrape.com/');
+    const response = await page.goto(request.url);
     console.log(response.status());
     const result = await page.evaluate(() => {
         const data = [];
@@ -19,7 +19,7 @@ module.exports = async ({ page, request }) => {
         return data;
     });
 
-    await page.screenshot({ path: 'page1.png', fullPage: true });
+    await page.screenshot({ path: 'books-toscrape.png', fullPage: true });
 
     return {
         data: result,
