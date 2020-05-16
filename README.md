@@ -1,4 +1,4 @@
-# Agenty Chrome API
+# Agenty Chrome Puppeteer API for Browser as a Service, RPA, Web Scraping and more...
 
 ## API
  - [/function](https://www.agenty.com/docs/chrome/puppeteer-function-api)
