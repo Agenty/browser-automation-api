@@ -5,9 +5,9 @@
 module.exports = async ({ page, request }) => {
     
     // Go to login page and enter username, password and click on login btn
-    await page.goto('https://sandbox.moodledemo.net/login/index.php');            
-    await page.type('#username', 'admin');
-    await page.type('#password', 'sandbox');
+    await page.goto(request.url);            
+    await page.type('#username', request.username);
+    await page.type('#password', request.password);
     await page.click('#loginbtn');
     
     // Capture screenshot after login
