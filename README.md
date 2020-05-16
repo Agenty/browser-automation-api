@@ -1,5 +1,12 @@
 # Agenty Chrome API
 
+## API
+ - [/function](https://www.agenty.com/docs/chrome/puppeteer-function-api)
+ - [/screenshot](https://www.agenty.com/docs/chrome/screenshot-api)
+ - [/pdf](https://www.agenty.com/docs/chrome/pdf-api)
+ - [/content](https://www.agenty.com/docs/chrome/content-api)
+ - [/extract] coming soon!
+
 ## Try with Postman
 - Download the [postman collection](/postman-collection.json)
 - Create an environment
