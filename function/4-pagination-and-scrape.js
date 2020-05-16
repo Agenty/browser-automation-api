@@ -3,9 +3,9 @@
 
 module.exports = async ({ page, request }) => {
     console.log('Navigating...');
-    await page.goto('http://books.toscrape.com/');
+    await page.goto(request.url);
 
-    const maxPages = 3;
+    const maxPages = request.maxPages || 3;
     const result = [];
     
     for(var p = 0; p < maxPages; p++){
