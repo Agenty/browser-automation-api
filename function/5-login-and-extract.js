@@ -9,6 +9,7 @@ module.exports = async ({ page, request }) => {
     await page.type('#username', request.username);
     await page.type('#password', request.password);
     await page.click('#loginbtn');
+    await page.waitForNavigation();
     
     // Capture screenshot after login
     await page.screenshot({path : 'sandbox.png'})
