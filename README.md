@@ -5,7 +5,7 @@
  - [/screenshot](https://www.agenty.com/docs/chrome/screenshot-api)
  - [/pdf](https://www.agenty.com/docs/chrome/pdf-api)
  - [/content](https://www.agenty.com/docs/chrome/content-api)
- - [/extract] coming soon!
+ - [/extract](https://www.agenty.com/docs/chrome/extract-api)
 
 ## Try with Postman
 - Download the [postman collection](/postman-collection.json)
