@@ -28,7 +28,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/pdf?url=https://example.com",
+							"raw": "{{BASE_URL}}/pdf?url=https://example.com&apiKey={{API_KEY}}",
 							"host": [
 								"{{BASE_URL}}"
 							],
@@ -39,6 +39,10 @@
 								{
 									"key": "url",
 									"value": "https://example.com"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{API_KEY}}"
 								}
 							]
 						}
@@ -75,12 +79,18 @@
 							"raw": "{\r\n  \"url\": \"https://example.com\",\r\n  \"gotoOptions\": {\r\n    \"timeout\": 30000,\r\n    \"waitUntil\": \"networkidle2\"\r\n  },\r\n  \"options\":{\r\n  \t\"format\" : \"A4\"\r\n  }\r\n}"
 						},
 						"url": {
-							"raw": "{{BASE_URL}}/pdf",
+							"raw": "{{BASE_URL}}/pdf?apiKey={{API_KEY}}",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"pdf"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{API_KEY}}"
+								}
 							]
 						}
 					},
@@ -112,7 +122,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/screenshot?url=https://example.com",
+							"raw": "{{BASE_URL}}/screenshot?url=https://example.com&apiKey={{API_KEY}}",
 							"host": [
 								"{{BASE_URL}}"
 							],
@@ -123,6 +133,10 @@
 								{
 									"key": "url",
 									"value": "https://example.com"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{API_KEY}}"
 								}
 							]
 						}
@@ -159,12 +173,18 @@
 							"raw": "{\r\n  \"url\": \"https://example.com\",\r\n  \"gotoOptions\": {\r\n    \"timeout\": 30000,\r\n    \"waitUntil\": \"load\"\r\n  },\r\n  \"options\":{\r\n  \t\"fullPage\" : false,\r\n  \t\"type\" : \"jpeg\",\r\n  \t\"quality\" : 50,\r\n  \t\"omitBackground\" : true\r\n  }\r\n}"
 						},
 						"url": {
-							"raw": "{{BASE_URL}}/screenshot",
+							"raw": "{{BASE_URL}}/screenshot?apiKey={{API_KEY}}",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"screenshot"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{API_KEY}}"
+								}
 							]
 						}
 					},
@@ -196,7 +216,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/content?url=https://example.com",
+							"raw": "{{BASE_URL}}/content?url=https://example.com&apiKey={{API_KEY}}",
 							"host": [
 								"{{BASE_URL}}"
 							],
@@ -207,6 +227,10 @@
 								{
 									"key": "url",
 									"value": "https://example.com"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{API_KEY}}"
 								}
 							]
 						}
@@ -243,12 +267,18 @@
 							"raw": "{\r\n  \"url\": \"https://example.com\",\r\n  \"gotoOptions\": {\r\n    \"timeout\": 30000,\r\n    \"waitUntil\": \"domcontentloaded\"\r\n  },\r\n  \"userAgent\" : \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36\"\r\n}"
 						},
 						"url": {
-							"raw": "{{BASE_URL}}/content",
+							"raw": "{{BASE_URL}}/content?apiKey={{API_KEY}}",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"content"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{API_KEY}}"
+								}
 							]
 						}
 					},
@@ -280,7 +310,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/redirects?url=https://httpbin.org/redirect/1",
+							"raw": "{{BASE_URL}}/redirects?url=https://httpbin.org/redirect/1&apiKey={{API_KEY}}",
 							"host": [
 								"{{BASE_URL}}"
 							],
@@ -291,6 +321,10 @@
 								{
 									"key": "url",
 									"value": "https://httpbin.org/redirect/1"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{API_KEY}}"
 								}
 							]
 						}
@@ -327,12 +361,18 @@
 							"raw": "{\r\n  \"url\": \"https://httpbin.org/redirect/1\",\r\n  \"gotoOptions\": {\r\n    \"timeout\": 10000,\r\n    \"waitUntil\": \"load\"\r\n  }\r\n}"
 						},
 						"url": {
-							"raw": "{{BASE_URL}}/redirects",
+							"raw": "{{BASE_URL}}/redirects?apiKey={{API_KEY}}",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"redirects"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{API_KEY}}"
+								}
 							]
 						}
 					},
@@ -374,12 +414,18 @@
 							"raw": "{\n    \"code\": \"module.exports=(async({page:t,request:a})=>{console.log(a.url); const e=await t.goto(a.url),s=await t.title(); return{data:{status:e.status(),title:s},type:\\\"application/json\\\"}});\",\n    \"request\": {\n        \"url\": \"https://example.com\"\n    }\n}"
 						},
 						"url": {
-							"raw": "{{BASE_URL}}/function",
+							"raw": "{{BASE_URL}}/function?apiKey={{API_KEY}}",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"function"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{API_KEY}}"
+								}
 							]
 						}
 					},
@@ -388,6 +434,39 @@
 			],
 			"protocolProfileBehavior": {}
 		},		
+		{
+			"name": "extract",
+			"item": [
+				{
+					"name": "Extract structured data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/extract?url=https://agenty.github.io/Agenty.TestData/scraping/schema/Restaurant-schema.html&apiKey={{API_KEY}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"extract"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://agenty.github.io/Agenty.TestData/scraping/schema/Restaurant-schema.html"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{API_KEY}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
 	],
 	"protocolProfileBehavior": {}
 }
