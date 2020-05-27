@@ -1,0 +1,6 @@
+{ 
+    "name" : "Agenty",
+    "food" : "Pizza",
+    "drink" : "Coke",
+    "desserts" : ["chocolate cake", "apple pie"]
+ }
