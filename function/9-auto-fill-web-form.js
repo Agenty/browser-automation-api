@@ -16,7 +16,9 @@ module.exports = async ({ page, request }) => {
     await page.click("#medium");
    
     // Select multiple desserts
-    await page.select("#dessert", "chocolate cake", "apple pie");
+    // desserts = ['chocolate cake', 'apple pie'];
+    // use spread operator for array https://github.com/puppeteer/puppeteer/issues/5948
+    await page.select("#dessert", ...request.desserts);
     
     // Click on Yes customer
     await page.click("input[name='Customer'][value='Yes']");
