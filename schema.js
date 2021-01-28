@@ -282,7 +282,7 @@ const functionSchema = Joi.object().keys({
   request: Joi.object(),
   logs: Joi.boolean().default(true),
   anonymous: Joi.object().keys({
-    proxy: Joi.boolean().default(false),
+    proxy: Joi.boolean().default(true),
     proxyAuthenticate : Joi.object().keys({
       username : Joi.string(),
       password : Joi.string()
